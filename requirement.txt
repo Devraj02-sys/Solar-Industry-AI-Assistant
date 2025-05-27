@@ -1,0 +1,9 @@
+gradio==4.14.0
+opencv-python
+numpy
+torch>=2.0.0
+torchvision
+Pillow
+matplotlib
+transformers  # optional, only if using LLM later
+segment-anything @ git+https://github.com/facebookresearch/segment-anything.git
