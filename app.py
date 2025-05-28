@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/#fileId=https%3A//huggingface.co/spaces/Devraj02/solar-analyzer/blob/main/app.ipynb
 """
 
-!pip install ultralytics gradio openai --quiet
+pip install ultralytics gradio openai --quiet
 
 from ultralytics import YOLO
 import cv2
@@ -94,7 +94,7 @@ gr.Interface(
     title="AI-Powered Rooftop Solar Analyzer (Auto Area Detection)"
 ).launch()
 
-!pip install transformers accelerate --quiet
+pip install transformers accelerate --quiet
 
 from transformers import pipeline
 
@@ -143,15 +143,15 @@ gr.Interface(
     title="AI Rooftop Solar Analyzer (Offline LLM)"
 ).launch()
 
-!pip install git+https://github.com/facebookresearch/segment-anything.git
-!pip install opencv-python matplotlib --quiet
+pip install git+https://github.com/facebookresearch/segment-anything.git
+pip install opencv-python matplotlib --quiet
 
 import os
 
 # Create directory and download the model
 os.makedirs("sam_weights", exist_ok=True)
 
-!wget -O sam_weights/sam_vit_h.pth https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
+wget -O sam_weights/sam_vit_h.pth https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
 
 from segment_anything import sam_model_registry, SamAutomaticMaskGenerator
 import torch
@@ -265,7 +265,7 @@ demo=gr.Interface(
 if __name__ == "__main__":
     demo.launch(share=True)
 
-!pip install reportlab
+pip install reportlab
 
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
